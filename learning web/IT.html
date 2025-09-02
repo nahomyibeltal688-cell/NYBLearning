@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT - Learn with NYB</title>
+    <link rel="stylesheet" href="./IT.css">
+</head>
+<body>
+    <header>
+        <h1>Learn with NYB</h1>
+        <div class="menu-toggle" id="mobile-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="maths.html">Maths</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="chemistry.html">Chemistry</a></li>
+                <li><a href="biology.html">Biology</a></li>
+                <li><a href="it.html" class="active">IT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>IT Lessons</h2>
+        <p>Learn programming, web development, and databases with examples, exercises, and videos.</p>
+
+        <section class="topics">
+            <h3>Topics</h3>
+            <ul>
+                <li><a href="#programming">Programming Basics</a></li>
+                <li><a href="#htmlcss">HTML & CSS</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#python">Python</a></li>
+                <li><a href="#databases">Databases</a></li>
+            </ul>
+        </section>
+
+        <section id="programming">
+            <h3>Programming Basics</h3>
+            <p>Learn about variables, data types, and control structures.</p>
+            <h4>Example:</h4>
+            <p>Variable declaration in Python: <code>x = 10</code></p>
+            <h4>Exercise:</h4>
+            <p>Create a program that prints "Hello World".</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc" title="Programming Basics" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="htmlcss">
+            <h3>HTML & CSS</h3>
+            <p>Learn how to create and style web pages.</p>
+            <h4>Example:</h4>
+            <p>&lt;h1&gt;Hello&lt;/h1&gt; &lt;p style="color:blue;"&gt;This is a paragraph.&lt;/p&gt;</p>
+            <h4>Exercise:</h4>
+            <p>Create a simple webpage with a heading and paragraph.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="HTML CSS Lesson" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="javascript">
+            <h3>JavaScript</h3>
+            <p>Learn programming for web interactivity.</p>
+            <h4>Example:</h4>
+            <p>Display message: <code>alert("Hello!");</code></p>
+            <h4>Exercise:</h4>
+            <p>Create a button that changes text when clicked.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hdI2bqOjy3c" title="JavaScript Lesson" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="python">
+            <h3>Python</h3>
+            <p>Learn Python programming for general purpose tasks.</p>
+            <h4>Example:</h4>
+            <p>Print statement: <code>print("Hello Python")</code></p>
+            <h4>Exercise:</h4>
+            <p>Write a Python program to add two numbers.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kqtD5dpn9C8" title="Python Lesson" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="databases">
+            <h3>Databases</h3>
+            <p>Learn about storing and retrieving data using SQL.</p>
+            <h4>Example:</h4>
+            <p>Create table: <code>CREATE TABLE students (id INT, name VARCHAR(50));</code></p>
+            <h4>Exercise:</h4>
+            <p>Insert data and select all rows from a table.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HXV3zeQKqGY" title="Databases Lesson" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="references">
+            <h3>Reference Books</h3>
+            <ul>
+                <li><i>Introduction to Programming</i> by David I. Schneider</li>
+                <li><i>HTML & CSS: Design and Build Websites</i> by Jon Duckett</li>
+                <li><i>JavaScript & JQuery</i> by Jon Duckett</li>
+                <li><i>Python Crash Course</i> by Eric Matthes</li>
+                <li><i>SQL for Beginners</i> by John Smith</li>
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <h3>Quick IT Quiz</h3>
+            <form id="itQuiz">
+                <p>1. Which tag is used for a heading in HTML?</p>
+                <input type="radio" name="q1" value="h1"> &lt;h1&gt;<br>
+                <input type="radio" name="q1" value="p"> &lt;p&gt;<br>
+
+                <p>2. Python command to print text?</p>
+                <input type="radio" name="q2" value="print"> print()<br>
+                <input type="radio" name="q2" value="echo"> echo()<br>
+
+                <p>3. SQL command to get all data from a table?</p>
+                <input type="radio" name="q3" value="SELECT"> SELECT<br>
+                <input type="radio" name="q3" value="INSERT"> INSERT<br>
+
+                <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+            </form>
+            <p id="quiz-result"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn with NYB. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        function submitQuiz() {
+            let score = 0;
+            const total = 3;
+            const form = document.getElementById("itQuiz");
+            const answers = form.querySelectorAll("input[type=radio]:checked");
+            answers.forEach(ans => {
+                if (ans.value === "h1" || ans.value === "print" || ans.value === "SELECT") {
+                    score++;
+                }
+            });
+            document.getElementById("quiz-result").innerText = "You scored " + score + " out of " + total;
+        }
+    </script>
+</body>
+</html>

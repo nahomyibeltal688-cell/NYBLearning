@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Learn with NYB</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Learn with NYB</h1>
+      <div class="menu-btn" id="menu-btn">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <h2>About Learn with NYB</h2>
+      <p>"Education is the key to unlock the golden door of freedom."</p>
+    </section>
+
+    <section class="about-content">
+      <div class="section">
+        <h3>Our Mission</h3>
+        <p>Learn with NYB is an online educational platform dedicated to helping students master subjects like Maths, Physics, Chemistry, Biology, and IT with simple explanations and structured lessons.</p>
+      </div>
+
+      <div class="section">
+        <h3>Our Vision</h3>
+        <p>We believe education should be simple, accessible, and enjoyable. Our vision is to make learning effective for every student, no matter where they are.</p>
+      </div>
+
+      <div class="section">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Beginner-friendly notes and lessons.</li>
+          <li>Focused on exam success and real-world applications.</li>
+          <li>100% free and easy to access.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>About the Founder</h3>
+        <p>Learn with NYB was created by <strong>Nahom</strong>, a passionate student who believes learning should be accessible to everyone. With this platform, he aims to help others grow through knowledge.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <a href="lessons.html" class="btn">Start Learning Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Learn with NYB. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+      if(link.href === window.location.href){
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

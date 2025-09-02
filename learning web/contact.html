@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./contact.css">
+  <title>Contact Us</title>
+</head>
+<body>
+
+  <header class="heading">
+    <h4 class="logo">NYB Learning</h4>
+    <div class="menu-btn" id="menu-btn">&#9776;</div>
+    <nav class="nav" id="nav">
+      <a href="./index.html">Home</a>
+      <a href="./lessons.html">Lessons</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <p>Debre Markos City, Ethiopia</p>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <p>+251 9849802378</p>
+        </div>
+        <div class="contact-item">
+  <span class="icon">📧</span>
+  <p><a href="mailto:nahomyibeltal688@gmail.com">nahomyibeltal688@gmail.com</a></p>
+</div>
+
+        
+        <div class="contact-item">
+          <span class="icon">✈️</span>
+          <a href="https://t.me/@NYB_712">
+          <p>Telegram : Nahom Yibeltal</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&COPY; 2025 NYB Learning | Made By Nahom</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('nav');
+
+    menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(link => {
+        if(link.href === window.location.href){
+            link.classList.add('active');
+        }
+    });
+  </script>
+
+</body>
+</html>

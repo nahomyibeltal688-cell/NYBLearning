@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with NYB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="heading">
+        <h4 class="logo">NYB Learning</h4>
+        <div class="menu-btn" id="menu-btn">&#9776;</div>
+        <nav class="nav" id="nav">
+            <a class="nav-buttons" href="./index.html">Home</a>
+            <a class="nav-buttons" href="./lessons.html">Lessons</a>
+            <a class="nav-buttons" href="./about.html">About</a> 
+            <a class="nav-buttons" href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <h2>Welcome To NYB's Learning Hub</h2>
+        <p>Learn Math, Science, Coding, and more - step by step</p>
+        <a class="goahead" href="./lessons.html">Start Learning</a>
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://web.facebook.com/profile.php?id=61580270544794" target="_blank" class="social-icon fb" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon tw" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon ln" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-icon gh" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p>&COPY; 2025 NYB Learning | Made By Nahom</p>
+    </footer>
+
+   <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('nav');
+
+    menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+
+    // Highlight active link
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(link => {
+        if(link.href === window.location.href){
+            link.classList.add('active');
+        }
+    });
+</script>
+
+</body>
+</html>
